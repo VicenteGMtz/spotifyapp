@@ -1,0 +1,29 @@
+<div class="example-container">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Spotify</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #snav fixedTopGap="56">
+            <mat-nav-list>
+                <a mat-list-item routerLink="home" (click)="snav.toggle()">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    home
+                </a>
+                <a mat-list-item routerLink="search" (click)="snav.toggle()">
+                    <mat-icon mat-list-icon>search</mat-icon>
+                    Search
+                </a>
+                <a mat-list-item routerLink="artista" (click)="snav.toggle()">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    Artists
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

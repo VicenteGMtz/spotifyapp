@@ -1,0 +1,29 @@
+<div class="container-dashboard">
+    <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" #termino (keyup)="buscar(termino.value)" />
+        <!-- <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+            <mat-icon>close</mat-icon>
+        </button> -->
+    </mat-form-field>
+    <app-loading *ngIf="loading"></app-loading>
+    <app-card [Items]="artistas"></app-card>
+    <!-- <mat-grid-list cols="4" rowHeight="4:6">
+        <mat-grid-tile *ngFor="let artista of artistas">
+            <div class="div-card">
+                <mat-card class="example-card">
+                    <img mat-card-image [src]="artista.images | noimage" alt="Photo of a Shiba Inu" />
+                    <mat-card-content>
+                        <p>
+                            {{ artista.name }}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list> -->
+</div>

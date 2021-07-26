@@ -1,0 +1,7 @@
+<div class="container-dashboard">
+    <div class="error" *ngIf="error">
+        <p>{{ message }}</p>
+    </div>
+    <app-loading *ngIf="loading"></app-loading>
+    <app-card [Items]="nuevasCanciones"></app-card>
+</div>
